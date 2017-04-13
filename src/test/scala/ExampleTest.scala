@@ -2,6 +2,8 @@ import java.io.{ByteArrayInputStream, ByteArrayOutputStream, PrintStream}
 
 import org.scalatest.fixture
 
+import scala.io.Source
+
 /**
   * @see https://stepik.org/lesson/Overview-9293/step/9
   */
@@ -35,17 +37,23 @@ class ExampleTest extends fixture.FunSuite {
     }
   }
 
-  test("calculate 3 + 5 = 8") { f =>
-    f.setInput("3 5")
+  test("sampleInput1 from file") { f =>
+    val input = readTestInputFromResource("code00-example-sampleInput1.txt")
+    f.setInput(input)
     Main.main(Array())
     val actual = f.getOutput()
     assert(actual == "8")
   }
 
-  test("calculate 4 + 7 = 11") { f =>
-    f.setInput("3 5")
+  test("calculate 4 + 7 = 11 hard coded") { f =>
+    f.setInput("4 7")
     Main.main(Array())
     val actual = f.getOutput()
-    assert(actual === "8")
+    assert(actual === "11")
+  }
+
+  def readTestInputFromResource(inputFileName: String): String = {
+    val source = Source.fromURL(getClass.getResource(s"/$inputFileName"))
+    source.mkString
   }
 }

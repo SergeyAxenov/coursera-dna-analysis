@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dna-analysis.iml" filepath="$PROJECT_DIR$/.idea/modules/dna-analysis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dna-analysis-build.iml" filepath="$PROJECT_DIR$/.idea/modules/dna-analysis-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coursera-dna-analysis.iml" filepath="$PROJECT_DIR$/.idea/modules/coursera-dna-analysis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/coursera-dna-analysis-build.iml" filepath="$PROJECT_DIR$/.idea/modules/coursera-dna-analysis-build.iml" />
     </modules>
   </component>
 </project>
